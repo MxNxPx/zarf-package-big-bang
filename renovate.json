@@ -10,8 +10,6 @@
   "rebaseStalePrs": true,
   "schedule": ["after 4pm and before 6am every weekday"],
   "dependencyDashboard": true,
-//  "username": "renovatebot-github-app[bot]",
-//  "gitAuthor": "renovatebot-github-app <234441+renovatebot-github-app[bot]@users.noreply.github.com>",   
   "commitMessageSuffix": "[ci-skip]",
   "platform": "github",
   "onboarding": false,
@@ -20,9 +18,7 @@
   "rebaseWhen": "conflicted",
   "commitBodyTable": true,
   "ignorePaths": ["archive/**"],
-  // Do not notify on closed unmerged PRs
   "suppressNotifications": ["prIgnoreNotification"],
-  // Do not rebase PRs
   "rebaseWhen": "conflicted",
   "assignees": ["@mxnxpx"],
   "helm-values": {
@@ -35,7 +31,7 @@
       "ansible",
       "scripts",
       ".github"
-    ],
+    ]
   },
   "regexManagers": [
     {
@@ -54,7 +50,6 @@
     }
   ],
   "packageRules": [
-    // Setup datasources
     {
       "datasources": ["gitlab-tags"],
       "commitMessageTopic": "Gitlab tag {{depName}}",
@@ -72,7 +67,6 @@
       "enabled": true,
       "separateMinorPatch": true
     },
-    // Add labels according to package and update types
     {
       "datasources": ["gitlab-tags"],
       "updateTypes": ["major"],
