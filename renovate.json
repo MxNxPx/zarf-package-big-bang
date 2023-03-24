@@ -23,6 +23,9 @@
   "helm-values": {
     "fileMatch": ["./.+\\.yaml$"]
   },
+  "gitlab-tags": {
+    "fileMatch": ["./.+\\.[yt][ao]?ml$"]
+  },
   "kubernetes": {
     "fileMatch": ["\\.yaml$"],
     "ignorePaths": [
