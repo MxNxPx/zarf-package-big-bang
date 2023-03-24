@@ -23,7 +23,7 @@
   "helm-values": {
     "fileMatch": ["./.+\\.yaml$"]
   },
-  "gitlab-tags": {
+  "zarf-configs": {
     "fileMatch": ["./.+\\.[yt][ao]?ml$"]
   },
   "kubernetes": {
