@@ -40,7 +40,7 @@
       "datasourceTemplate": "helm"
     },
     {
-      "fileMatch": ["./.+\\.[yt][a|o]?ml$"],
+      "fileMatch": ["./.+\\.[yt][ao]?ml$"],
       "matchStrings": [
         "# renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?( registryUrl=(?<registryUrl>.*?))?\\s.*?_version\\s*[:|=]\\s*[\"|'](?<currentValue>.*)[\"|']\\s"
       ],
