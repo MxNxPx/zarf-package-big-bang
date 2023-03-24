@@ -40,9 +40,9 @@
       "datasourceTemplate": "helm"
     },
     {
-      "fileMatch": ["./.+\\.[yt].ml$"],
+      "fileMatch": ["./.+\\.[yt][a]?ml$"],
       "matchStrings": [
-        "# renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?( registryUrl=(?<registryUrl>.*?))?\\s.*?_version\s*[:|=]\s*[\"|'](?<currentValue>.*)\[\"|']\\s"
+        "# renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?( registryUrl=(?<registryUrl>.*?))?\\s.*?_version\\s*[:|=]\\s*[\"|'](?<currentValue>.*)[\"|']\\s"
       ],
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
     }
