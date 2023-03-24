@@ -19,7 +19,6 @@
   "commitBodyTable": true,
   "ignorePaths": ["archive/**"],
   "suppressNotifications": ["prIgnoreNotification"],
-  "assignees": ["@mxnxpx"],
   "helm-values": {
     "fileMatch": ["./.+\\.yaml$"]
   },
