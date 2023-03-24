@@ -23,7 +23,7 @@
   "helm-values": {
     "fileMatch": ["./.+\\.yaml$"]
   },
-  "zarf-configs": {
+  "regex": {
     "fileMatch": ["./.+\\.[yt][ao]?ml$"]
   },
   "kubernetes": {
