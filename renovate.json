@@ -23,9 +23,6 @@
   "helm-values": {
     "fileMatch": ["./.+\\.yaml$"]
   },
-  "regex": {
-    "fileMatch": ["./.+\\.[yt][ao]?ml$"]
-  },
   "kubernetes": {
     "fileMatch": ["\\.yaml$"],
     "ignorePaths": [
@@ -43,9 +40,16 @@
       "datasourceTemplate": "helm"
     },
     {
-      "fileMatch": ["./.+\\.[yt][ao]?ml$"],
+      "fileMatch": ["./.+\\.ya?ml$"],
       "matchStrings": [
-        "# renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?( registryUrl=(?<registryUrl>.*?))?\\s.*?_version\\s*[:=]\\s*(?<currentValue>.*)\\s"
+        "# renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?( registryUrl=(?<registryUrl>.*?))?\\s.*?_version\\s*:\\s*(?<currentValue>.*)\\s"
+      ],
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
+    }
+    {
+      "fileMatch": ["./.+\\.toml$"],
+      "matchStrings": [
+        "# renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?( registryUrl=(?<registryUrl>.*?))?\\s.*?_version\\s*=\\s*(?<currentValue>.*)\\s"
       ],
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
     }
