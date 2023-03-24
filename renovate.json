@@ -8,7 +8,7 @@
   "timezone": "America/New_York",
   "repositories": ["MxNxPx/zarf-package-big-bang"],
   "rebaseStalePrs": true,
-  "schedule": ["after 4pm and before 6am every weekday"],
+  "schedule": ["after 4pm and before 11am every weekday"],
   "dependencyDashboard": true,
   "commitMessageSuffix": "[ci-skip]",
   "platform": "github",
@@ -40,9 +40,9 @@
       "datasourceTemplate": "helm"
     },
     {
-      "fileMatch": ["./.+\\.yaml$"],
+      "fileMatch": ["./.+\\.[yt].ml$"],
       "matchStrings": [
-        "# renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?( registryUrl=(?<registryUrl>.*?))?\\s.*?_version: \"(?<currentValue>.*)\"\\s"
+        "# renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?( registryUrl=(?<registryUrl>.*?))?\\s.*?_version\s*[:|=]\s*[\"|'](?<currentValue>.*)\[\"|']\\s"
       ],
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
     }

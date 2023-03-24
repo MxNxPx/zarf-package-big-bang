@@ -1,0 +1,11 @@
+package:
+  create: 
+    max_package_size: "1000000000"
+    set:
+      # renovate: datasource=gitlab-tags depName=big-bang/bigbang versioning=semver registryUrl=https://repo1.dso.mil
+      bigbang_version: "1.51.0"
+  deploy:
+    set:
+      domain: bob.bigbang.dev
+      public_key_file: bigbang.dev.key
+      public_cert_file: bigbang.dev.cert
