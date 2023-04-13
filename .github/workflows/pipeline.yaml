@@ -19,8 +19,10 @@ jobs:
           password: ${{ secrets.REGISTRY1_PASSWORD }}
           
       - name: Install Zarf
-        uses: defenseunicorns/setup-zarf@v0.25.0
+        uses: defenseunicorns/setup-zarf@main
         with:
+          # renovate: datasource=github-tags depName=defenseunicorns/zarf versioning=semver
+          version: v0.25.0
           download-init-package: true
 
       - name: Create DUBBD
