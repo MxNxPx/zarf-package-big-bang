@@ -19,7 +19,7 @@ jobs:
           password: ${{ secrets.REGISTRY1_PASSWORD }}
           
       - name: Install Zarf
-        uses: defenseunicorns/setup-zarf@v0.25.0
+        uses: defenseunicorns/setup-zarf@v1.0.0
         with:
           download-init-package: true
 
