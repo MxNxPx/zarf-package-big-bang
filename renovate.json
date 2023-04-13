@@ -8,7 +8,7 @@
   "timezone": "America/New_York",
   "repositories": ["MxNxPx/zarf-package-big-bang"],
   "rebaseStalePrs": true,
-  "schedule": ["after 12am and before 11pm every weekday"],
+  "schedule": ["after 12pm and before 11am every weekday"],
   "dependencyDashboard": true,
   "commitMessageSuffix": "[ci-skip]",
   "platform": "github",
